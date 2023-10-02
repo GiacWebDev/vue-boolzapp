@@ -31,13 +31,13 @@ background-color: red;
   min-width: 800px;
   width: 80%;
   height: 800px;
-  background-color: #EAEAEA;
+  background-color: #EAEAEA
 }
 
-/* LEFT SIDE */
+/* ######################## LEFT SIDE ######################## */
 
 .aside {
-  width: 40%;
+  width: 35%;
   height: 100%;
 }
 
@@ -63,7 +63,7 @@ background-color: red;
 
 .aside .top .right i {
   margin: 0 5px;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 /* notification stripe */
@@ -79,8 +79,8 @@ background-color: red;
   display: flex;
   align-items: center;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background-color: white;
 }
 
@@ -125,9 +125,56 @@ background-color: red;
   height: 100%;
 }
 
-
-/* RIGHT SIDE */
-.message-box {
-  width: 60%;
+/* message box */
+.aside .thumbnails-message {
   width: 100%;
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
+  /* background-color: white; */
+}
+
+.aside .thumbnails-message .user-thumb {
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+  padding: 10px 10px 10px 17px;
+  border-bottom: 1px solid rgba(236, 236, 236, 0.796);
+}
+
+.aside .thumbnails-message .user-thumb:hover {
+  background-color: #e9ebeb;
+}
+
+.aside .thumbnails-message .user-thumb img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.aside .thumbnails-message .user-thumb .hour-message {
+  margin: 0;
+}
+
+.aside .thumbnails-message .user-thumb .hour-message p {
+  color: rgb(180, 180, 180);
+}
+
+.aside .thumbnails-message .user-thumb .info-message {
+  margin-left: 15px;
+}
+
+.aside .thumbnails-message .user-thumb .info-message p {
+  color: rgb(180, 180, 180);
+  margin-top: 4px;
+  font-size: .9rem;
+}
+
+
+
+
+
+/* ######################## RIGHT SIDE ######################## */
+.message-box {
+  width: 65%;
 }
