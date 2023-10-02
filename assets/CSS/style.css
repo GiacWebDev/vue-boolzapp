@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
 
 /* creare gradient su main */
@@ -69,7 +71,7 @@ background-color: red;
 .aside .notification {
   display: flex;
   align-items: center;
-  height: 70px;
+  padding: 10px;
   background-color: #8EDAFC;
 }
 
@@ -82,16 +84,45 @@ background-color: red;
   background-color: white;
 }
 
+.aside .notification .icon i {
+  font-size: 1.3rem;
+}
+
+.aside .notification .notify-info {
+  padding-left: 10px;
+}
+
+.aside .top .left,
+.aside .top .right,
+.aside .notification .icon,
+.aside .notification .notify-info {
+  margin: 0;
+}
+
 /* search stripe */
-.aside .search div {
+.aside .search {
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: 3px;
+  height: 40px;
+  padding: 5px;
+}
+
+.aside .search span {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  background-color: white;
+  height: 100%;
+  border-radius: 3px;
 }
 
 .aside .search input {
-  height: 30px;
+  border-radius: 3px;
   width: 100%;
+  padding-left: 7px;
   border: 1px solid white;
+  height: 100%;
 }
 
 
