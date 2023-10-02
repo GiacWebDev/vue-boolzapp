@@ -218,13 +218,34 @@ background-color: red;
 }
 
 
-
-
-
-
-
+/* chat-box */
 .message-box .chat-box {
   overflow-y: scroll;
   height: calc(100vh - 198px);
   background-image: url(/assets/img/mine.jpg);
+  padding: 50px 70px 50px 70px;
+}
+
+.message-box .chat-box .spacer-msg-right {
+  width: 100%;
+  position: relative;
+}
+
+.message-box .chat-box .user-message {
+  display: block;
+  position: relative;
+  float: right;
+  margin: 0;
+  width: 300px;
+  padding: 15px;
+  border-radius: 10px 10px 0px 10px;
+  background-color: #d5f9b9;
+}
+
+.message-box .chat-box .user-message span {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: .7rem;
+  color: rgb(180, 180, 180);
 }
