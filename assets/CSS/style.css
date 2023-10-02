@@ -62,8 +62,8 @@ background-color: red;
 }
 
 .aside .top .right i {
-  margin: 0 5px;
-  font-size: 1.2rem;
+  margin: 0 7px;
+  font-size: 1.3rem;
 }
 
 /* notification stripe */
@@ -172,36 +172,59 @@ background-color: red;
 
 
 
-
-
 /* ######################## RIGHT SIDE ######################## */
+
+/* top bar */
 .message-box {
   width: 65%;
 }
 
 .message-box .top-bar {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px;
   height: 60px;
+}
+
+.message-box .top-bar .left {
   display: flex;
-}
-
-.message-box .top-bar img {
-  margin: 0 10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.message-box .top-bar .info-message {
+  align-items: center;
   margin: 0;
 }
 
-.message-box .top-bar .info-message p {
-  color:rgb(180, 180, 180);
+.message-box .top-bar .left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 15px 0 0;
 }
 
+.message-box .top-bar .left p {
+  color: rgb(180, 180, 180);
+  font-size: .9rem;
+  margin-top: 3px;
+}
+
+.message-box .top-bar .icons {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: rgb(180, 180, 180);
+}
+
+.message-box .top-bar .icons i {
+  margin: 0 7px;
+  font-size: 1.3rem;
+}
+
+
+
+
+
+
+
 .message-box .chat-box {
+  overflow-y: scroll;
   height: calc(100vh - 198px);
   background-image: url(/assets/img/mine.jpg);
 }
