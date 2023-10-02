@@ -82,6 +82,18 @@ background-color: red;
   background-color: white;
 }
 
+/* search stripe */
+.aside .search div {
+  width: 100%;
+  padding: 3px;
+}
+
+.aside .search input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid white;
+}
+
 
 /* RIGHT SIDE */
 .message-box {
