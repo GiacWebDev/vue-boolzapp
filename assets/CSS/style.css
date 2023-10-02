@@ -30,7 +30,7 @@ background-color: red;
   display: flex;
   min-width: 800px;
   width: 80%;
-  height: 800px;
+  /* height: 800px; */
   background-color: #EAEAEA
 }
 
@@ -128,9 +128,9 @@ background-color: red;
 /* message box */
 .aside .thumbnails-message {
   width: 100%;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 303px);
   overflow-y: scroll;
-  /* background-color: white; */
+  background-color: white;
 }
 
 .aside .thumbnails-message .user-thumb {
@@ -177,4 +177,31 @@ background-color: red;
 /* ######################## RIGHT SIDE ######################## */
 .message-box {
   width: 65%;
+}
+
+.message-box .top-bar {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  display: flex;
+}
+
+.message-box .top-bar img {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.message-box .top-bar .info-message {
+  margin: 0;
+}
+
+.message-box .top-bar .info-message p {
+  color:rgb(180, 180, 180);
+}
+
+.message-box .chat-box {
+  height: calc(100vh - 198px);
+  background-image: url(/assets/img/mine.jpg);
 }
