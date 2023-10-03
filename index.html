@@ -88,52 +88,65 @@
       </div>
 
       <!-- right section -->
-      <div class="message-box">  
-        <div class="top-bar">
+      <div class="right-section">
 
-          <div class="left">
-            <img src="assets/img/avatar_1.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Michele</h4>
-              <p>Ultimo messaggio inviato oggi alle 12:00</p>
+        <div class="message-box">  
+          <div class="top-bar">
+  
+            <div class="left">
+              <img src="assets/img/avatar_1.jpg" alt="user1">
+  
+              <div class="info-message">
+                <h4>Michele</h4>
+                <p>Ultimo messaggio inviato oggi alle 12:00</p>
+              </div>
+  
             </div>
-
+  
+            <div class="right icons">
+              <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
+              <i class="fa-solid fa-paperclip" style="color: #b1b1b1;"></i>
+              <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
+            </div>
+  
           </div>
-
-          <div class="right icons">
-            <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
-            <i class="fa-solid fa-paperclip" style="color: #b1b1b1;"></i>
-            <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
-          </div>
-
+  
+          <div class="chat-box">
+  
+            <div class="msgs-in-chat"
+            v-for="(message, index) in contacts[activeThumb].messages">
+              <div class="msg-g" v-if="message.status === 'sent'">
+                <p>{{ message.message }}</p>
+                <span>15:30</span>
+              </div>
+    
+              <!-- <div class="sent">
+                <p>Ricordati di stendere i panni</p>
+                <span>15:50</span>
+              </div>-->
+    
+              <div class="msg-w" v-if="message.status === 'received'">
+                <p>{{ message.message }}</p>
+                <span>16:15</span>
+              </div>
+            </div>
+          </div>  
         </div>
-
-        <div class="chat-box">
-
-          <div class="msgs-in-chat"
-          v-for="(message, index) in contacts[activeThumb].messages"
->
-            <div class="msg-g" v-if="message.status === 'sent'">
-              <p>{{ message.message }}</p>
-              <span>15:30</span>
-            </div>
   
-            <!-- <div class="sent">
-              <p>Ricordati di stendere i panni</p>
-              <span>15:50</span>
-            </div>-->
+         <!-- fine message box -->
   
-            <div class="msg-w" v-if="message.status === 'received'">
-              <p>{{ message.message }}</p>
-              <span>16:15</span>
-            </div>
+        <div class="input-message">
+          <div class="icon">
+            <i class="fa-regular fa-face-smile" style="color: #6b7376;"></i>
           </div>
 
+          <input type="text" placeholder="Scrivi un messaggio">
 
-
-
-        </div>  
+          <div class="icon">
+            <i class="fa-solid fa-microphone" style="color: #6b7376;"></i>
+          </div>
+  
+        </div>
       </div>
       
     </div>  

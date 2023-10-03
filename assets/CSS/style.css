@@ -176,8 +176,9 @@ background-color: red;
 
 /* ######################## RIGHT SIDE ######################## */
 
-/* top bar */
-.message-box {
+/* RIGHT SECTION */
+
+.right-section {
   width: 65%;
 }
 
@@ -223,7 +224,7 @@ background-color: red;
 /* chat-box */
 .message-box .chat-box {
   overflow-y: scroll;
-  height: calc(100vh - 198px);
+  height: calc(100vh - 248px);
   background-image: url(/assets/img/mine.jpg);
   padding: 50px 70px 50px 70px;
 }
@@ -264,4 +265,27 @@ background-color: red;
   right: 4px;
   font-size: .7rem;
   color: rgb(180, 180, 180);
+}
+
+/* INPUT MESSAGE */
+
+.input-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 7px 15px;
+}
+
+.input-message input {
+  width: 87%;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: .9rem;
+}
+
+.input-message i {
+  font-size: 1.3rem;
 }
