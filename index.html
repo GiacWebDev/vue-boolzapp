@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- VUE JS -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
   <title>Boolzapp</title>
@@ -22,10 +24,11 @@
 
   <!-- sfondo pagina -->
   <main>
-    <div class="container">
+
+    <div class="container" id="app">
+
       <!-- left section -->
       <div class="aside">
-
         <div class="top">
           <div class="left">
             <img src="assets/img/avatar_io.jpg" alt="io">
@@ -169,12 +172,11 @@
             </div>
           </div>
 
-        </div>
-
+        </div>  
       </div>
-      <!-- right section -->
-      <div class="message-box">
 
+      <!-- right section -->
+      <div class="message-box">  
         <div class="top-bar">
 
           <div class="left">
@@ -196,7 +198,6 @@
         </div>
 
         <div class="chat-box">
-
           <div class="sent">
             <p>Hai portato a spasso il cane?</p>
             <span>15:30</span>
@@ -204,22 +205,21 @@
 
           <div class="sent">
             <p>Ricordati di stendere i panni</p>
-            <span>15:30</span>
+            <span>15:50</span>
           </div>
-
 
           <div class="receive">
-            <p>Ricordati di stendere i panni</p>
-            <span>15:30</span>
+            <p>Tutto fatto!</p>
+            <span>16:15</span>
           </div>
-        </div>
-        
+        </div>  
       </div>
       
-    </div>
+    </div>  
+
   </main>
 
   
-  <script src="assets/JS/script.js"></script>
+  <script type="module" src="/assets/JS/script.js"></script>
 </body>
 </html>
