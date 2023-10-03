@@ -6,7 +6,7 @@ createApp({
   data() {
     return {
       contacts,
-      activeContact: 0, //contatto selezionato con contatotore
+      activeThumb: 0, 
       
     }
   }
