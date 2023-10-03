@@ -8,9 +8,11 @@
 
 /* creare gradient su main */
 main {
-display: flex;
-align-items: center;
-padding-top: 50px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  background-image: linear-gradient(to bottom, #009688 0%, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
 }
 
 .debug {
