@@ -70,7 +70,8 @@
           <div 
           class="user-thumb" 
           v-for="(thumb, index) in contacts"
-          :key="index">
+          :key="index"
+          @click="selectThumb(index)">
           
             <img :src="thumb.avatar" alt="avatar">
   
