@@ -68,9 +68,13 @@
 
         <div class="thumbnails-message">
 
-          <div class="user-thumb">
-            <img src="assets/img/avatar_1.jpg" alt="user1">
-
+          <div 
+          class="user-thumb" 
+          v-for="(thumb, index) in contacts"
+          :key="index">
+          
+            <img :src="thumb.avatar" alt="avatar">
+  
             <div class="info-message">
               <h4>Michele</h4>
               <p>Ultimo messaggio inviato</p>
@@ -81,7 +85,7 @@
             </div>
           </div>
 
-          <div class="user-thumb">
+          <!-- <div class="user-thumb">
             <img src="assets/img/avatar_2.jpg" alt="user1">
 
             <div class="info-message">
@@ -170,7 +174,7 @@
             <div class="hour-message">
               <p>12:00</p>
             </div>
-          </div>
+          </div> -->
 
         </div>  
       </div>

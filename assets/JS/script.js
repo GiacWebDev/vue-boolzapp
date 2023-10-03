@@ -5,7 +5,8 @@ import { contacts } from "./contacts.js";
 createApp({
   data() {
     return {
-      contacts
+      contacts,
+      activeContact: 0, //contatto selezionato con contatotore
       
     }
   }
