@@ -67,7 +67,6 @@
         </div>
 
         <div class="thumbnails-message">
-
           <div 
           class="user-thumb" 
           v-for="(thumb, index) in contacts"
@@ -77,19 +76,6 @@
   
             <div class="info-message">
               <h4>{{ thumb.name }}</h4>
-              <p>{{ thumb.message }}</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div>
-
-          <!-- <div class="user-thumb">
-            <img src="assets/img/avatar_2.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Fabio</h4>
               <p>Ultimo messaggio inviato</p>
             </div>
 
@@ -97,84 +83,6 @@
               <p>12:00</p>
             </div>
           </div>
-
-          <div class="user-thumb">
-            <img src="assets/img/avatar_3.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Samuele</h4>
-              <p>Ultimo messaggio inviato</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div>
-
-          <div class="user-thumb">
-            <img src="assets/img/avatar_4.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Alessandro B.</h4>
-              <p>Ultimo messaggio inviato</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div>
-
-          <div class="user-thumb">
-            <img src="assets/img/avatar_5.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Alessandro L.</h4>
-              <p>Ultimo messaggio inviato</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div>
-
-          <div class="user-thumb">
-            <img src="assets/img/avatar_6.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Claudia</h4>
-              <p>Ultimo messaggio inviato</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div>
-
-          <div class="user-thumb">
-            <img src="assets/img/avatar_7.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Federico</h4>
-              <p>Ultimo messaggio inviato</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div>
-
-          <div class="user-thumb">
-            <img src="assets/img/avatar_8.jpg" alt="user1">
-
-            <div class="info-message">
-              <h4>Davide</h4>
-              <p>Ultimo messaggio inviato</p>
-            </div>
-
-            <div class="hour-message">
-              <p>12:00</p>
-            </div>
-          </div> -->
 
         </div>  
       </div>
@@ -202,20 +110,29 @@
         </div>
 
         <div class="chat-box">
-          <div class="sent">
-            <p>Hai portato a spasso il cane?</p>
-            <span>15:30</span>
+
+          <div class="msgs-in-chat"
+          v-for="(message, index) in contacts[activeThumb].messages"
+>
+            <div class="msg-g" v-if="message.status === 'sent'">
+              <p>{{ message.message }}</p>
+              <span>15:30</span>
+            </div>
+  
+            <!-- <div class="sent">
+              <p>Ricordati di stendere i panni</p>
+              <span>15:50</span>
+            </div>-->
+  
+            <div class="msg-w" v-if="message.status === 'received'">
+              <p>{{ message.message }}</p>
+              <span>16:15</span>
+            </div>
           </div>
 
-          <div class="sent">
-            <p>Ricordati di stendere i panni</p>
-            <span>15:50</span>
-          </div>
 
-          <div class="receive">
-            <p>Tutto fatto!</p>
-            <span>16:15</span>
-          </div>
+
+
         </div>  
       </div>
       

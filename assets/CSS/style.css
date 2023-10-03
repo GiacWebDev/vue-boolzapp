@@ -228,7 +228,7 @@ background-color: red;
   padding: 50px 70px 50px 70px;
 }
 
-.message-box .chat-box .sent {
+.message-box .chat-box .msg-g {
   position: relative;
   margin: 0 0 30px 0;
   float: right;
@@ -239,7 +239,7 @@ background-color: red;
   background-color: #d5f9b9;
 }
 
-.message-box .chat-box .sent span {
+.message-box .chat-box .msg-g span {
   position: absolute;
   bottom: 4px;
   right: 4px;
@@ -247,7 +247,7 @@ background-color: red;
   color: rgb(180, 180, 180);
 }
 
-.message-box .chat-box .receive{
+.message-box .chat-box .msg-w{
   position: relative;
   margin: 0 0 30px 0;
   width: 300px;
@@ -258,7 +258,7 @@ background-color: red;
   background-color: white
 }
 
-.message-box .chat-box .receive span {
+.message-box .chat-box .msg-w span {
   position: absolute;
   bottom: 4px;
   right: 4px;
