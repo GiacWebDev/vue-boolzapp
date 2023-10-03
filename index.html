@@ -141,7 +141,10 @@
             <i class="fa-regular fa-face-smile" style="color: #6b7376;"></i>
           </div>
 
-          <input type="text" placeholder="Scrivi un messaggio">
+          <input 
+          type="text"
+          placeholder="Scrivi un messaggio"
+          @keyup.enter="sendMessage()">
 
           <div class="icon">
             <i class="fa-solid fa-microphone" style="color: #6b7376;"></i>
