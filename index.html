@@ -72,7 +72,7 @@
           v-for="(contact, index) in contacts"
           :key="index"
           @click="selectContact(index)"
-          :class="{'active': contact == activeContact}"
+          :class="{'active': contact === activeContact}"
           >
           
             <img :src="contact.avatar" alt="avatar">
@@ -120,17 +120,12 @@
             v-for="(message, index) in contacts[activeContact].messages">
               <div class="msg-g" v-if="message.status === 'sent'">
                 <p>{{ message.message }}</p>
-                <span>15:30</span>
+                <span>{{ message.date }}</span>
               </div>
-    
-              <!-- <div class="sent">
-                <p>Ricordati di stendere i panni</p>
-                <span>15:50</span>
-              </div>-->
-    
+
               <div class="msg-w" v-if="message.status === 'received'">
                 <p>{{ message.message }}</p>
-                <span>16:15</span>
+                <span>{{ message.date }}</span>
               </div>
             </div>
           </div>  
@@ -146,6 +141,7 @@
           <input 
           type="text"
           placeholder="Scrivi un messaggio"
+          v-model.trim="userMessage"
           @keyup.enter="sendMessage()">
 
           <div class="icon">
