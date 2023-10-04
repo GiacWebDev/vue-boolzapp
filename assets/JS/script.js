@@ -70,12 +70,16 @@ createApp({
     },
 
     formatTime(dateTime) {
-      // const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      // creo orario per messaggio da inclusere con data
       const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
       return new Intl.DateTimeFormat('it', options).format(dateTime);
     },
     
     
-  } 
-  
+  },
+
+  created() {
+
+  }
+
 }).mount("#app");
