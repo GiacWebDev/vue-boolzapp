@@ -18,11 +18,26 @@ createApp({
       activeContact: 0,
       userText: '',
       userMessage: [], // Aggiungo array per memorizzare i messaggi dell'utente
+      searchText: '',
 
      };
   },
 
   methods: {
+
+    filterContacts() {
+      const search = this.searchText.toLowerCase();
+  
+      // controllo se il nome dei contatti è incluso nella ricerca
+      this.contacts.forEach((contact) => {
+        const name = contact.name.toLowerCase();
+  
+        // rendo visibile il contatto in base alla ricerca
+        contact.visible = name.includes(search);
+      });
+    },
+
+
     // seleziono la thumb
     selectContact(index) { 
       // svuoto l'input quando cambio chat
