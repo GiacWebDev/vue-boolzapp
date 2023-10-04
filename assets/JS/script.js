@@ -33,12 +33,9 @@ createApp({
       const userMessage = {
         message: this.userText,
         // Imposto il messaggio mandato con 'sent'
-        status: 'sent', 
+        status: 'sent',
       };
-      console.log(userMessage); // Aggiungi questo console.log
-
     }
-    
     
   },
   
