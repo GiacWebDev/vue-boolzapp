@@ -69,14 +69,16 @@
         <div class="thumbnails-message">
           <div 
           class="user-thumb" 
-          v-for="(thumb, index) in contacts"
+          v-for="(contact, index) in contacts"
           :key="index"
-          @click="selectThumb(index)">
+          @click="selectContact(index)"
+          :class="{'active': contact == activeContact}"
+          >
           
-            <img :src="thumb.avatar" alt="avatar">
+            <img :src="contact.avatar" alt="avatar">
   
             <div class="info-message">
-              <h4>{{ thumb.name }}</h4>
+              <h4>{{ contact.name }}</h4>
               <p>Ultimo messaggio inviato</p>
             </div>
 
@@ -115,7 +117,7 @@
           <div class="chat-box">
   
             <div class="msgs-in-chat"
-            v-for="(message, index) in contacts[activeThumb].messages">
+            v-for="(message, index) in contacts[activeContact].messages">
               <div class="msg-g" v-if="message.status === 'sent'">
                 <p>{{ message.message }}</p>
                 <span>15:30</span>

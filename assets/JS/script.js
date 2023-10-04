@@ -9,7 +9,7 @@ createApp({
     return {
 
       contacts,
-      activeThumb: 0,
+      activeContact: 0,
       userText: '',
       userMessages: [], // Aggiungo array per memorizzare i messaggi dell'utente
 
@@ -18,11 +18,11 @@ createApp({
 
   methods: {
     // seleziono la thumb
-    selectThumb(index) { 
+    selectContact(index) { 
       // svuoto l'input quando cambio chat
       this.userText = '';
-      this.activeThumb = index;
-      console.log(this.activeThumb);
+      this.activeContact = index;
+      console.log(this.activeContact);
     },
   
     sendMessage() {
@@ -34,7 +34,11 @@ createApp({
         message: this.userText,
         // Imposto il messaggio mandato con 'sent'
         status: 'sent',
+
       };
+
+      this.contacts[this.activeContact].messages.push(userMessage);
+
     }
     
   },
