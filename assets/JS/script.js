@@ -1,7 +1,7 @@
 // TO DO: 
 
 // Fix class active
-
+// add date in
 
 const { createApp } = Vue;
 
@@ -34,7 +34,7 @@ createApp({
     sendMessage() {
       const userMessage = {
         message: this.userText,
-        date: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
+        date: this.formatTime(new Date()), // ottendo la data formattata
         status: 'sent',
       };
     
@@ -42,20 +42,24 @@ createApp({
       
       this.userText = '';
     
-      this.contacts[this.activeContact].messages.push(replyMessage);
-      
-      console.log(userMessage);
-      
       setTimeout(() => {
         const replyMessage = {
           message: 'OK!',
-          date: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
+          date: this.formatTime(new Date()),
           status: 'received',
         };
         console.log(replyMessage);
         
+        this.contacts[this.activeContact].messages.push(replyMessage);
       }, 1000);
-    }
+    },
+
+    formatTime(dateTime) {
+      // const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      return new Intl.DateTimeFormat('it', options).format(dateTime);
+    },
+    
     
   } 
   
