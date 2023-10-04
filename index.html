@@ -118,15 +118,17 @@
   
             <div class="msgs-in-chat"
             v-for="(message, index) in contacts[activeContact].messages">
-              <div class="msg-g" v-if="message.status === 'sent'">
+
+              <div class="sent" v-if="message.status === 'sent'">
                 <p>{{ message.message }}</p>
                 <span>{{ message.date }}</span>
               </div>
 
-              <div class="msg-w" v-if="message.status === 'received'">
+              <div class="received" v-if="message.status === 'received'">
                 <p>{{ message.message }}</p>
                 <span>{{ message.date }}</span>
               </div>
+
             </div>
           </div>  
         </div>

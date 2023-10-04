@@ -147,7 +147,7 @@ background-color: red;
   background-color: #e9ebeb;
 }
 
-.aside .thumbnails-message .user-thumb .active {
+.aside .thumbnails-message .user-thumb:active {
   background-color: #e9ebeb;
 }
 
@@ -233,7 +233,7 @@ background-color: red;
   padding: 50px 70px 50px 70px;
 }
 
-.message-box .chat-box .msg-g {
+.message-box .chat-box .sent {
   position: relative;
   margin: 0 0 30px 0;
   float: right;
@@ -244,7 +244,7 @@ background-color: red;
   background-color: #d5f9b9;
 }
 
-.message-box .chat-box .msg-g span {
+.message-box .chat-box .sent span {
   position: absolute;
   bottom: 4px;
   right: 4px;
@@ -252,7 +252,7 @@ background-color: red;
   color: rgb(180, 180, 180);
 }
 
-.message-box .chat-box .msg-w{
+.message-box .chat-box .received {
   position: relative;
   margin: 0 0 30px 0;
   width: 300px;
@@ -263,7 +263,7 @@ background-color: red;
   background-color: white
 }
 
-.message-box .chat-box .msg-w span {
+.message-box .chat-box .received span {
   position: absolute;
   bottom: 4px;
   right: 4px;

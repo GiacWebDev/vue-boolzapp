@@ -1,3 +1,8 @@
+// TO DO: 
+
+// Fix class active
+
+
 const { createApp } = Vue;
 
 import { contacts } from "./contacts.js";
@@ -29,6 +34,7 @@ createApp({
       // Creo un oggetto messaggio ed inserisco nel nuovo array userMessages
       const userMessage = {
         message: this.userText,
+        date: new Date().toLocaleTimeString(),
         // Imposto il messaggio mandato con 'sent'
         status: 'sent',
       };
@@ -37,11 +43,21 @@ createApp({
       
       this.userText = ''; // Resetto scritta input    
 
-      console.log(userMessage);
-    }
-
-    
-  },
+        setTimeout(() => {
+          const replyMessage = {
+            message: 'OK!',
+            date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+            status: 'received'
+          };
   
+          console.log(replyMessage);
+          this.contacts[this.activeContact].messages.push(replyMessage);
+      
+        }, 1000);
+      console.log(userMessage);
+
+    },
+    
+  } 
   
 }).mount("#app");
