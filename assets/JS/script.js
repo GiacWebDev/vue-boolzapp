@@ -7,6 +7,7 @@ const { createApp } = Vue;
 
 import { contacts } from "./contacts.js";
 
+
 createApp({
 
   data() {
@@ -31,32 +32,30 @@ createApp({
     },
   
     sendMessage() {
-      // Creo un oggetto messaggio ed inserisco nel nuovo array userMessages
       const userMessage = {
         message: this.userText,
-        date: new Date().toLocaleTimeString(),
-        // Imposto il messaggio mandato con 'sent'
+        date: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
         status: 'sent',
       };
-
+    
       this.contacts[this.activeContact].messages.push(userMessage);
       
-      this.userText = ''; // Resetto scritta input    
-
-        setTimeout(() => {
-          const replyMessage = {
-            message: 'OK!',
-            date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
-            status: 'received'
-          };
-  
-          console.log(replyMessage);
-          this.contacts[this.activeContact].messages.push(replyMessage);
+      this.userText = '';
+    
+      this.contacts[this.activeContact].messages.push(replyMessage);
       
-        }, 1000);
       console.log(userMessage);
-
-    },
+      
+      setTimeout(() => {
+        const replyMessage = {
+          message: 'OK!',
+          date: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
+          status: 'received',
+        };
+        console.log(replyMessage);
+        
+      }, 1000);
+    }
     
   } 
   
