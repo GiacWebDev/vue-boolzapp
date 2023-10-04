@@ -71,11 +71,11 @@
 
         <div class="thumbnails-message">
           <div 
-          class="user-thumb" 
-          v-for="(contact, index) in contacts"
+          class="user-thumb"
+          v-for="(contact, index) in filteredContacts"
           :key="index"
           @click="selectContact(index)"
-          :class="{'active': contact === activeContact}"
+          :class="{ 'active': index === activeContact }"
           >
           
             <img :src="contact.avatar" alt="avatar">

@@ -78,8 +78,18 @@ createApp({
     
   },
 
-  created() {
-
-  }
+  computed: {
+    filteredContacts() {
+      const search = this.searchText.toLowerCase();
+      // Filtro i contatti in base al testo di ricerca
+      // Uso il metodo "filter" per creare un nuovo array
+      return this.contacts.filter((contact) => {
+        // nome del contatto in minuscolo per falicitare la ricerca
+        const name = contact.name.toLowerCase();
+        //includo il nome nel contatto filtrato
+        return name.includes(search);
+      });
+    },
+  },
 
 }).mount("#app");
