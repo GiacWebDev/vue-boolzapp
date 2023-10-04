@@ -34,8 +34,8 @@ createApp({
       };
 
       this.contacts[this.activeContact].messages.push(userMessage);
-
-      this.userMessage = ''; // Resetto scritta input    
+      
+      this.userText = ''; // Resetto scritta input    
 
       console.log(userMessage);
     }
