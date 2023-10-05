@@ -147,7 +147,7 @@ background-color: red;
   background-color: #e9ebeb;
 }
 
-.aside .thumbnails-message .user-thumb:active {
+.aside .thumbnails-message .user-thumb .active {
   background-color: #e9ebeb;
 }
 
@@ -270,6 +270,7 @@ background-color: red;
   font-size: .7rem;
   color: rgb(180, 180, 180);
 }
+
 
 /* INPUT MESSAGE */
 

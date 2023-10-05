@@ -1,7 +1,7 @@
 // TO DO: 
 
 // Fix class active
-// add date in
+// add date in message
 
 const { createApp } = Vue;
 
@@ -16,9 +16,9 @@ createApp({
 
       contacts,
       activeContact: 0,
-      userText: '',
+      userText: '', // testo in chat
       userMessage: [], // Aggiungo array per memorizzare i messaggi dell'utente
-      searchText: '',
+      searchText: '', // barra di ricerca
 
      };
   },
@@ -49,13 +49,14 @@ createApp({
     sendMessage() {
       const userMessage = {
         message: this.userText,
-        date: this.formatTime(new Date()), // ottendo la data formattata
+        date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+        // date: this.formatTime(new Date()), // ottendo la data formattata
         status: 'sent',
       };
     
       this.contacts[this.activeContact].messages.push(userMessage);
-      
       this.userText = '';
+      this.activeContact = index
     
       setTimeout(() => {
         const replyMessage = {
@@ -74,7 +75,6 @@ createApp({
       const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
       return new Intl.DateTimeFormat('it', options).format(dateTime);
     },
-    
     
   },
 
